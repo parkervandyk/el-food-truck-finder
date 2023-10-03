@@ -26,3 +26,4 @@ There are several tradeoffs and shortcuts I took while creating this and I'd lik
 - Authentication for the frontend would be fun to implement but not really necessary since this is quite a simple project.
 - Having authentication would allow you to 'save' your favorite food trucks so that could be useful.
 - Pulling in google maps data to show ratings would also be a great feature int the future.
+- I succussfully deployed the frontend using netlify (<https://visionary-kheer-398972.netlify.app/>) but for the sake of time I didn't get to deploy the backend express app.
