@@ -27,7 +27,12 @@ app.get('/foodtrucks', async (req, res) => {
     }).data;
 
     const filteredTrucks = records.filter((record: any) => {
-      if (!record['FoodItems'] || record['Status'] !== 'APPROVED') return false;
+      if (record['Status'] !== 'APPROVED') return false;
+
+      // If no specific cuisine is provided, return all approved trucks
+      if (!cuisineType || cuisineType.trim() === '') return true;
+
+      // If a specific cuisine is provided, only return those that match
       return record['FoodItems']
         .toLowerCase()
         .includes(cuisineType.toLowerCase());

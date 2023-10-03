@@ -9,6 +9,8 @@ function initMap() {
   const cuisineType = urlParams.get('cuisine');
   if (cuisineType) {
     fetchFoodTrucks(cuisineType);
+  } else {
+    fetchFoodTrucks('');
   }
 }
 
