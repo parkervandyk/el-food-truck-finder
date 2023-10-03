@@ -1,9 +1,12 @@
 import express from 'express';
+import cors from 'cors';
 import axios from 'axios';
 import Papa from 'papaparse';
 
 const app = express();
 const PORT = 3000;
+
+app.use(cors());
 
 app.get('/foodtrucks', async (req, res) => {
   const cuisineType = req.query.cuisine as string;
