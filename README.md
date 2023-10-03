@@ -14,7 +14,18 @@ If you'd like to contribute to this project you can clone it locally on your mac
 
 Navigate into the local directory on your machine and run `npm install` to install all dependencies.
 
+Since this project is written in TypeScript but we are compiling to JavaScript, you'll have to run `npm build` to compile before running the app.
+
 Run the project with `npm start`
+
+## Docker configuration
+
+If you want to run the application in a docker container I've set that up as well.
+
+Run `docker build -t IMAGE_NAME .`
+
+Once it builds the container, you can then run `docker run -p 3000:3000 IMAGE_NAME`
+The app will then be running in a container and available on port 3000.
 
 ## Additional documentation
 
