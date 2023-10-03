@@ -6,7 +6,13 @@ import Papa from 'papaparse';
 const app = express();
 const PORT = 3000;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+);
 
 app.get('/foodtrucks', async (req, res) => {
   const cuisineType = req.query.cuisine as string;
